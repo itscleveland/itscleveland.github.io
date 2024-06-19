@@ -2,29 +2,75 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 <title>itsclevelandKE</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+            $.get("https://www.standardmedia.co.ke/thenairobian/rss", function(data) {
+                var list = $("#blog-post-list");
+                $(data).find("item").each(function() {
+                    var title = $(this).find("title").text();
+                    var link = $(this).find("link").text();
+                    var description = $(this).find("description").text();
+
+                    var listItem = $("<li>");
+                    var linkItem = $("<a>").attr("href", link).text(title);
+                    var descriptionItem = $("<p>").text(description);
+
+                    listItem.append(linkItem);
+                    listItem.append(descriptionItem);
+
+                    list.append(listItem);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <header>
-<img src="https://scontent-amt2-1.cdninstagram.com/v/t51.39111-15/335859302_663670698140017_623118063702378496_n.jpg?stp=dst-jpg_s719x719&_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=105&_nc_ohc=lCxh6X8lBMcAX9qFXjx&edm=ANmP7GQBAAAA&ccb=7-5&oh=00_AfAu9wzZjnxUDxApRDUsWGIPHk0kxG2mIF8VAS8M6xh30A&oe=64278043&_nc_sid=276363" alt="Header Image" width="600" height="200">
+<img src="https://scontent-amt2-1.cdninstagram.com/v/t51.39111-15/335859302_663670698140017_623118063702378496_n.jpg?stp=dst-jpg_s719x719&_nc_ht=scontent-amt2-1.cdninstagram.com&_nc_cat=105&_nc_ohc=lCxh6X8lBMcAX9qFXjx&edm=ANmP7GQBAAAA&ccb=7-5&oh=00_AfAu9wzZjnxUDxApRDUsWGIPHk0kxG2mIF8VAS8M6xh30A&oe=64278043&_nc_sid=276363" alt="itsclevelandKE Header Image" width="600" height="200">
 <h1>Welcome to itsclevelandKE</h1>
 </header>
-<main>
-<section>
-<h2>Connect with Me</h2>
-<p>Follow me on my social media accounts:</p>
+<nav>
 <ul>
-<li><a href="https://www.facebook.com/profile.php?id=100090345216802">Facebook</a></li>
-<li><a href="https://www.instagram.com/its_c.l.3.v.3.l.a.n.d._ke/">Instagram</a></li>
-<li>WhatsApp: 0701211452</li>
-<li><a href="https://www.tiktok.com/@its_c.l.3.v.3.l.a.n.d_ke">TikTok</a></li>
+<li><a href="#connect">Connect with Me</a></li>
+<li><a href="#about">About Me</a></li>
 </ul>
-</section>
-<section>
-<h2>About Me</h2>
-<p>I am a professional individual with a passion for connecting with others through my social media presence. Here, you can explore my various profiles and get to know me better.</p>
-</section>
-</main>
-</body>
-</html>
+</nav>
+<main>
+    <section>
+    <blockquote>"When I wrote this code, only God and I understood what I did. Now only God knows."</blockquote>
+    <p>- cleveland //clevelandoa56@gmail.com</p>
+    </section>
+    <section id="connect">
+    ...
+        </section>
+    <section id="about">
+    ...
+        </section>
+    </main>    
+<section id="connect">
+    <section id="connect">
+        <h2>Connect with Me</h2>
+        <p>Follow me on my social media accounts:</p>
+        <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=100090345216802">Facebook</a></li>
+        <li><a href="https://www.instagram.com/its_c.l.3.v.3.l.a.n.d._ke/">Instagram</a></li>
+        <li>WhatsApp: 0701xxxx452</li>
+        <li><a href="https://www.tiktok.com/@its_c.l.3.v.3.l.a.n.d_ke">TikTok</a></li>
+        </ul>
+        </section>
+        <section id="about">
+        <h2>About Me</h2>
+        <p>
+        I am a professional individual with a diverse range of interests and experiences. I have a passion for connecting with others through my social media presence and sharing my unique perspective on the world. Through my various profiles, I aim to inspire, entertain, and engage with people from all walks of life. 
+                <br><br>
+        My interests include traveling ,watching movies,gaming ,cooking,and journaling and I have professional experience in Teaching. I am always eager to learn and grow, and I believe that building meaningful connections is the key to a fulfilling life.
+            </p>
+        </section>
+        <footer>
+            <p>All glory to God | © 2024 and forever itsclevelandKE. All rights reserved.</p>
+            </footer>
+            
